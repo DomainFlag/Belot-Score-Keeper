@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Belot</string>
+    <string name="number_hint">Score</string>
+</resources>
