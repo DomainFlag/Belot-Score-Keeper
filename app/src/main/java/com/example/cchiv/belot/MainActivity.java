@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setTotalB(score);
     }
 
-    public void reset(View view){
+    public void reset(View view) {
         sumA = 0;
         sumB = 0;
         String newText = "TOTAL: 0p";

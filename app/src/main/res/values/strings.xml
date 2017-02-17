@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Belot</string>
     <string name="number_hint">Score</string>
+    <string name="teamAName">TEAM A</string>
+    <string name="addTextA">ADD A</string>
+    <string name="teamBName">TEAM B</string>
+    <string name="addTextB">ADD B</string>
+    <string name="historyText">Games History:</string>
+    <string name="resetText">RESET</string>
 </resources>
