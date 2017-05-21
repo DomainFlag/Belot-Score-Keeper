@@ -4,162 +4,81 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cards2"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
     tools:context="com.example.cchiv.belot.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/teamAName"
+            android:textColor="@color/colorContrastText"
+            android:textSize="@dimen/activity_header_size"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/teamAName"
-                android:textColor="#ecf0f1"
-                android:textSize="42sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/historyA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/historyText"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/activity_subheader_size" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gameHistoryA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/activity_paragraph_size"
+            android:visibility="gone" />
 
-                <EditText
-                    android:id="@+id/numberA"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="1"
-                    android:hint="@string/number_hint"
-                    android:inputType="numberDecimal"
-                    android:textColorHighlight="#FFFFFF"
-                    android:textColorHint="#bdc3c7" />
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical">
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:background="#ecf0f1"
-                        android:onClick="setTextA"
-                        android:text="@string/addTextA"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textTotalA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:text=""
-                android:textColor="#FFFFFF" />
-
-            <TextView
-                android:id="@+id/historyA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/historyText"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textTotalA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/activity_paragraph_size"
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/teamBName"
-                android:textColor="#ecf0f1"
-                android:textSize="42sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/numberB"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="1"
-                    android:hint="@string/number_hint"
-                    android:inputType="numberDecimal"
-                    android:textColorHighlight="#FFFFFF"
-                    android:textColorHint="#bdc3c7" />
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical">
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:background="#ecf0f1"
-                        android:onClick="setTextB"
-                        android:text="@string/addTextB"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textTotalB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:text=""
-                android:textColor="#FFFFFF" />
-
-            <TextView
-                android:id="@+id/historyB"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/numberA"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/historyText"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:layout_weight="1"
+                android:hint="@string/number_hint"
+                android:inputType="numberSigned"
+                android:textSize="@dimen/activity_paragraph_size" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/colorContrastText"
+                android:onClick="setTextA"
+                android:text="@string/addTextA" />
 
         </LinearLayout>
 
@@ -167,22 +86,87 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-        <Button
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="#ecf0f1"
-            android:onClick="reset"
-            android:text="@string/resetText"
+            android:gravity="center_horizontal"
+            android:text="@string/teamBName"
+            android:textColor="@color/colorContrastText"
+            android:textSize="@dimen/activity_header_size"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/historyB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/historyText"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/activity_subheader_size" />
+
+        <TextView
+            android:id="@+id/gameHistoryB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/activity_paragraph_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textTotalB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/activity_paragraph_size"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/numberB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:hint="@string/number_hint"
+                android:inputType="numberSigned"
+                android:textSize="@dimen/activity_paragraph_size" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/colorContrastText"
+                android:onClick="setTextB"
+                android:text="@string/addTextB" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorContrastText"
+        android:onClick="reset"
+        android:text="@string/resetText" />
 
 </LinearLayout>
